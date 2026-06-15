@@ -24,12 +24,12 @@ spec:
         spec:
             containers:
                 - name: mongodb
-                  image: {{ .Values.statefulset.imageRepo }}
+                  image: "{{ .Values.statefulset.imageRepo }}:{{ .Values.statefulset.imageVersion }}"
                   imagePullPolicy: Always
                   volumeMounts:
                     - name: mongodb
                       mountPath: /data/db
-    volumeClaimTemplates:
+    volumeClaimTemplates: 
         - metadata: 
             name: mongodb
           spec:

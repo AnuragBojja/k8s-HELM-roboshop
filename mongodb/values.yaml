@@ -1,2 +1,3 @@
 StatefulSet:
-  imageRepo: anuragbojja/mongodb:v1
+  imageRepo: anuragbojja/mongodb
+  imageVersion: v1
