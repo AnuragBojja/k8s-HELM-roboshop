@@ -1,0 +1,2 @@
+StatefulSet:
+  imageRepo: anuragbojja/mongodb:v1
