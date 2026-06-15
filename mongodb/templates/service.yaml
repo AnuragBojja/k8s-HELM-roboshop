@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
     name: mongodb
-    namespcae: roboshop
+    namespace: roboshop
     labels:
         project: roboshop
         tier: database
@@ -21,7 +21,7 @@ apiVersion: v1
 kind: Service
 metadata:
     name: mongodb-headless
-    namespcae: roboshop
+    namespace: roboshop
     labels:
         project: roboshop
         tier: database
