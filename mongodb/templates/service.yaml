@@ -8,7 +8,7 @@ metadata:
         tier: database
         service: mongodb
 spec:
-    selectors:
+    selector:
         project: roboshop
         tier: database
         env: dev
@@ -28,7 +28,7 @@ metadata:
         service: mongodb
 spec:
     clusterIP: None
-    selectors:
+    selector:
         project: roboshop
         tier: database
         env: dev
