@@ -8,7 +8,7 @@ metadata:
         tier: backend
         service: catalogue
 spec:
-    replica: 1
+    replicas: 1
     selectors:
         matchLabels:
             project: roboshop
