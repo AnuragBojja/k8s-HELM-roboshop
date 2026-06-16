@@ -26,8 +26,8 @@ spec:
             image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
             imagePullPolicy: Always
             envFrom:
-                configMapRef:
-                  - name: cart
+              - configMapRef:
+                    name: cart
             livenessProbe:
                 httpGet:
                     path: /health
