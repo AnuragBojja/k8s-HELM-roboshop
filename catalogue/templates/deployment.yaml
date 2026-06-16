@@ -21,7 +21,7 @@ spec:
                 tier: backend
                 service: catalogue
         spec:
-            container:
+            containers:
                 - name: catalogue
                   image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
                   imagePullPolicy: Always
