@@ -1,0 +1,3 @@
+deployment:
+  imageRepo: anuragbojja/frontend
+  imageVersion: v1 
