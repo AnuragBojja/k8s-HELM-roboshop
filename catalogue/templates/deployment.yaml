@@ -22,30 +22,30 @@ spec:
                 service: catalogue
         spec:
             containers:
-                - name: catalogue
-                  image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
-                  imagePullPolicy: Always
-                  livenessProbe:
-                    httpGet:
-                        path: /health
-                        port: 8080
-                    initialDelaySeconds: 15
-                    periodSeconds: 10
-                  readinessProbe:
-                    httpGet:
-                        path: /health
-                        port: 8080
-                    initialDelaySeconds: 15
-                    failureThreshold: 2
-                    periodSeconds: 10
+                  - name: catalogue
+                    image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
+                    imagePullPolicy: Always
+                    livenessProbe:
+                        httpGet:
+                            path: /health
+                            port: 8080
+                        initialDelaySeconds: 15
+                        periodSeconds: 10
+                    readinessProbe:
+                        httpGet:
+                            path: /health
+                            port: 8080
+                        initialDelaySeconds: 15
+                        failureThreshold: 2
+                        periodSeconds: 10
                     envFrom:
                         configMapRef:
                             - name: catalogue
-                  resources:
-                    requests:
-                        memory: "128Mi"
-                        cpu: "250m"
-                    limits:
-                        memory: "256Mi"
-                        cpu: "350m"
-                    
+                    resources:
+                        requests:
+                            memory: "128Mi"
+                            cpu: "250m"
+                        limits:
+                            memory: "256Mi"
+                            cpu: "350m"
+                        
