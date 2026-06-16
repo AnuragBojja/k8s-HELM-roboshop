@@ -1,0 +1,3 @@
+deployment:
+  imageRepo: anuragbojja/shipping
+  imageVersion: v1

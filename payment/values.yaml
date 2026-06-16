@@ -1,0 +1,3 @@
+deployment:
+  imageRepo: anuragbojja/payment
+  imageVersion: v1 

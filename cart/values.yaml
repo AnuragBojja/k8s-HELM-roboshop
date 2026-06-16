@@ -1,0 +1,3 @@
+deployment:
+  imageRepo: anuragbojja/cart
+  imageVersion: v1 

@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: cart
+    namespace: roboshop
+    labels:
+        project: roboshop
+        tier: backend
+        service: cart
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+        project: roboshop
+        tier: backend
+        service: cart
+    template:
+        metadata:
+        labels:
+            project: roboshop
+            tier: backend
+            service: cart
+        spec:
+        containers:
+          - name: cart
+            image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
+            imagePullPolicy: Always
+            envFrom:
+                configMapRef:
+                  - name: cart
+            livenessProbe:
+                httpGet:
+                    path: /health
+                    port: 8080  
+                initialDelaySeconds: 15
+                periodSeconds: 10
+            readinessProbe:
+                httpGet: 
+                    path: /health
+                    port: 8080
+                initialDelaySeconds: 15
+                failureThreshold: 2
+                periodSeconds: 10
+            resources:
+                requests:
+                    memory: "128Mi"
+                    cpu: "250m"
+                limits:
+                    memory: "256Mi" 
+                    cpu: "350m"
