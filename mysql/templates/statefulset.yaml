@@ -22,7 +22,7 @@ spec:
                 tier: database
                 service: mysql
         spec:
-            container:
+            containers:
                 - name: mysql
                   image: "{{ .Values.statefulset.imageRepo }}:{{ .Values.statefulset.imageVersion }}"
                   imagePullPolicy: Always

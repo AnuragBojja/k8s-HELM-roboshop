@@ -16,8 +16,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-    name: mysql
-    namespace: roboshop-headless
+    name: mysql-headless
+    namespace: roboshop
 spec:
     clusterIP: None
     selector:
