@@ -28,11 +28,11 @@ metadata:
         service: redis
 spec:
     clusterIP: None
-        selector:
-            project: roboshop
-            tier: database
-            service: redis
-        ports:
-            - protocol: TCP
-            port: 6379
-            targetPort: 6379
+    selector:
+        project: roboshop
+        tier: database
+        service: redis
+    ports:
+        - protocol: TCP
+        port: 6379
+        targetPort: 6379
