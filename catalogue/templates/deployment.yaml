@@ -41,11 +41,11 @@ spec:
                     envFrom:
                         configMapRef:
                             - name: catalogue
-                    resources:
-                        requests:
-                            memory: "128Mi"
-                            cpu: "250m"
-                        limits:
-                            memory: "256Mi"
-                            cpu: "350m"
+                  resources:
+                    requests:
+                        memory: "128Mi"
+                        cpu: "250m"
+                    limits:
+                        memory: "256Mi"
+                        cpu: "350m"
                     
