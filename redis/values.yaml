@@ -1,3 +1,3 @@
 statefulset:
-  imageRepo: anuragbojja/redis
-  imageVersion: v1 
+  imageRepo: redis
+  imageVersion: 7
