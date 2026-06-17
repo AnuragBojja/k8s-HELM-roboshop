@@ -8,6 +8,8 @@ metadata:
     tier: database
     service: rabbitmq
 spec:
+  serviceName: rabbitmq-headless
+  replicas: 1
   selector:
     matchLabels:
       project: roboshop
